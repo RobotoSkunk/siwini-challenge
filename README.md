@@ -3,7 +3,7 @@
 This is the source code of the website I created for Siwini Challenge Poza Rica.
 
 I know, the code is dirty as f*ck, but I had no time, no organization and zero
-no information from the owners of the event almost all time.
+information from the owners of the event almost all time.
 
 
 ## Copyright
