@@ -1,0 +1,11 @@
+
+@font-face {
+	font-family: 'Progressive Soul';
+	src: local('Progressive Soul'),
+		local('PROGRESSIVE SOUL'),
+		url('./ttf/Progressive-Soul.ttf') format('woff2'),
+		url('./ttf/Progressive-Soul.woff') format('woff'),
+		url('./ttf/Progressive-Soul.woff2') format('truetype');
+	font-style: normal;
+	font-display: swap;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reto Veracruz por la ciencia 2023, Siwini Challenge Poza Rica 2023. Del 24 al 27 de Octubre de 2023.">
+<% if (locals.noindex) { %>
+	<meta name="robots" content="noindex, nofollow">
+<% } %>
+
+<noscript>
+	<meta http-equiv="refresh" content="0; url=/noscript">
+</noscript>
+
+<title><%= title %></title>
+
+<link rel="preload" href="/assets/css/stylesheet.css?v=<%= __version__ %>" as="style">
+<link rel="stylesheet" href="/assets/css/stylesheet.css?v=<%= __version__ %>">
+
+<link rel="canonical" href="<%= __canonical__ %>">
+
+<script defer src="/assets/js/main.js?v=<%= __version__ %>" nonce="<%= nonce %>"></script>
+
+<%- __head__ %>
+
+<% if (locals.message) { %>
+	<script nonce="<%= locals.nonce %>">
+		setTimeout(() => {
+			alert('<%= locals.message %>');
+		}, 500);
+	</script>
+<% } %>
+
+
+<div id="notification" style="display: none">
+	<div class="container">
+		<p></p>
+		<button>Aceptar</button>
+	</div>
+</div>
+
+<div id="app">
+	<header>
+		<div class="mobile">
+			<button class="toggle" aria-label="Abrir menú">
+				<svg viewBox="0 0 50 34" fill="none" width="35" height="24">
+					<rect fill="white" width="50" height="8" rx="4"/>
+					<rect fill="white" y="13" width="50" height="8" rx="4"/>
+					<rect fill="white" y="26" width="50" height="8" rx="4"/>
+				</svg>
+			</button>
+		</div>
+		<div class="banner"></div>
+		<nav>
+			<button class="toggle" aria-label="Cerrar menú">
+				<svg viewBox="0 0 30 30" fill="none" width="50" height="50">
+					<path fill="white" d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/>
+				</svg>
+			</button>
+
+			<a href="/"><span>INICIO</span></a>
+
+			<div class="dropdown">
+				<button><span>REGÍSTRATE</span></button>
+				<div class="options">
+					<a href="/registro">REGISTRO PARA ROBÓTICA</a>
+					<a href="/costos">COSTO DE ROBOTS</a>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<button><span>REGLAMENTOS</span></button>
+				<div class="options">
+					<a href="/reglas/carrera_de_insectos">CARRERA DE INSECTOS</a>
+					<a href="/reglas/microsumo">MICROSUMO</a>
+					<a href="/reglas/minisumo_autonomo">MINISUMO AUTÓNOMO</a>
+					<a href="/reglas/minisumo_radiocontrol">MINISUMO RADIOCONTROL</a>
+					<a href="/reglas/sumo_3kg_autonomo">SUMO 3KG. AUTÓNOMO</a>
+					<a href="/reglas/sumo_3kg_radio_control">SUMO 3KG. RADIO CONTROL</a>
+					<a href="/reglas/robotica_de_aplicacion">ROBÓTICA DE APLICACIÓN</a>
+					<a href="/reglas/carrera_de_drones">CARREA DE DRONES</a>
+					<a href="/reglas/seguidor_de_linea">SEGUIDOR DE LÍNEA</a>
+					<a href="/reglas/soccer">SOCCER</a>
+					<a href="/reglas/guerra_de_robots">GUERRA DE ROBOTS</a>
+					<a href="/reglas/minisumo_radiocontrol_jr">MINISUMO RADIO CONTROL JR.</a>
+					<a href="/reglas/carrera_de_insectos_jr">CARREA DE INSECTOS JR.</a>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<button><span>TORNEOS</span></button>
+				<div class="options">
+					<a href="/torneos/minisumo_autonomo_1">MINISUMO AUTÓNOMO 1</a>
+					<a href="/torneos/minisumo_autonomo_2">MINISUMO AUTÓNOMO 2</a>
+					<a href="/torneos/minisumo_radiocontrol_1">MINISUMO RADIOCONTROL 1</a>
+					<a href="/torneos/minisumo_radiocontrol_2">MINISUMO RADIOCONTROL 2</a>
+					<a href="/torneos/soccer">SOCCER</a>
+					<a href="/torneos/velocistas">VELOCISTAS</a>
+
+					<hr>
+
+					<a href="/torneos/combate_1_libra">COMBATE 1 LIBRA</a>
+					<a href="/torneos/combate_3_libras">COMBATE 3 LIBRAS</a>
+					<a href="/torneos/combate_12_libras">COMBATE 12 LIBRAS</a>
+					<a href="/torneos/carrera_de_insectos">CARRERA DE INSECTOS</a>
+					<a href="/torneos/microsumo">MICROSUMO</a>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<button><span>CALENDARIOS DEL EVENTO</span></button>
+				<div class="options">
+					<a href="/calendarios/congreso">CONGRESO</a>
+					<a href="/calendarios/robotica">ROBÓTICA</a>
+				</div>
+			</div>
+
+			<a href="/actividades"><span>PROGRAMA DE ACTIVIDADES</span></a>
+
+			<div class="dropdown">
+				<button><span>ARTÍCULOS DE INVESTIGACIÓN</span></button>
+				<div class="options">
+					<a href="/congreso/convocatoria">CONVOCATORIA</a>
+					<a href="/congreso/formatos">FORMATOS</a>
+					<a href="https://forms.office.com/r/ZLndnBxbWB" target="_blank">INSCRIBIR ARTÍCULO</a>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<button><span>HOSPEDAJES</span></button>
+				<div class="options">
+					<a href="/hospedajes/hotel_fiesta_inn">HOTEL FIESTA INN</a>
+					<a href="/hospedajes/hotel_paris">PARIS FC HOTEL</a>
+					<a href="/hospedajes/hotel_pozarica">HOTEL POZA RICA</a>
+					<a href="/hospedajes/hotel_victoria">HOTEL VICTORIA</a>
+					<a href="/hospedajes/hotel_marel">HOTEL MAREL</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<%- __body__ %>
+	</main>
+	
+	<footer></footer>
+</div>

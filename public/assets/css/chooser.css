@@ -1,0 +1,38 @@
+
+#chooser {
+	width: 700px;
+	max-width: 90%;
+
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+
+/*
+	Código extraído de https://github.com/RobotoSkunk/robotoskunk.com/blob/main/static-http/resources/css/settings.css
+*/
+
+.chooser-options {
+	display: grid;
+	padding: 20px;
+}
+
+.chooser-options .option {
+	display: inline-block;
+	overflow-x: hidden;
+
+	position: relative;
+	top: -50px;
+	width: 100%;
+	opacity: 0;
+	grid-area: 1 / 1 / 2 / 2;
+	visibility: hidden;
+
+	transition: top ease 0.75s, visibility ease 0.5s, opacity ease 0.5s;
+}
+
+.chooser-options .option.selected {
+	top: 0px;
+	opacity: 1;
+	visibility: visible;
+}

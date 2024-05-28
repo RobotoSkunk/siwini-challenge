@@ -1,0 +1,28 @@
+<%- layout('default') %>
+
+<div style="margin: 0 auto; max-width: 500px; padding: 15px; text-align: center">
+	<% if (id) { %>
+		<h1>CASI TERMINAMOS</h1>
+		<p>
+			Su solicitud ha sido enviada con éxito. Sin embargo, necesitamos que nos
+			envíe el comprobante de pago para poder confirmar su participación.
+		</p>
+
+		<p style="font-size: 1.5em"><b><%= id %></b></p>
+
+		<p><b>GUARDE EL CÓDIGO DE REGISTRO</b>, lo necesitará para enviar el comprobante de pago.</p>
+		<p>El comprobante debe ser enviado <a href="/registro/subir_recibo">aquí</a>.</p>
+
+		<p>
+			<b>Nota:</b> el código de registro <b>no es generado por equipo</b>, sino por categoría.
+						Por lo tanto, si te registraste en más de una categoría, debes realizar este
+						proceso por cada una de ellas.
+		</p>
+	<% } else { %>
+		<h1>REGISTRO EXITOSO</h1>
+
+		<p>Su solicitud ha sido enviada con éxito. No tiene que realizar ningún otro paso.</p>
+
+		<img src="/assets/img/itspr-robot.webp">
+	<% } %>
+</div>

@@ -1,0 +1,20 @@
+<%- layout('default') %>
+
+
+<div style="margin: 0 auto; max-width: 500px; padding: 15px;">
+	<h1 style="text-align: center;">ACCESO DE ADMINISTRADOR</h1>
+
+	<p style="color: var(--acc-red); font-size: 0.8em;">* Requerido.</p>
+
+	<form method="POST">
+		<div style="margin-top: 25px">
+			<p>
+				<label for="token">Token de acceso de administrador</label>
+				<br>
+				<input type="text" name="token" id="token" required>
+			</p>
+
+			<button>Ingresar</button>
+		</div>
+	</form>
+</div>

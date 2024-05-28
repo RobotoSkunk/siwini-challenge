@@ -1,0 +1,20 @@
+<%- layout('default') %>
+
+
+<div style="text-align: center">
+	<h1><%= name %></h1>
+
+	<iframe
+		width="1200"
+		height="850"
+		src="https://www.score7.io/tournaments/<%= code %>/overview?showName=true&showNavigation=true"
+		title="<%= name %>"></iframe>
+
+	<p>
+		<a href="https://www.score7.io/<%= code %>" target="_blank">
+			<button>
+				Abrir página
+			</button>
+		</a>
+	</p>
+</div>

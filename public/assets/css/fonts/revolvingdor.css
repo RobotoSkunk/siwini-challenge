@@ -1,0 +1,10 @@
+
+@font-face {
+	font-family: 'Revolvingdor';
+	src: local('Revolvingdor'),
+		url('./ttf/Revolvingdor.ttf') format('woff2'),
+		url('./ttf/Revolvingdor.woff') format('woff'),
+		url('./ttf/Revolvingdor.woff2') format('truetype');
+	font-style: normal;
+	font-display: swap;
+}

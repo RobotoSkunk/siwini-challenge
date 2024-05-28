@@ -1,0 +1,584 @@
+@import url('/assets/css/fonts/roboto.css');
+
+:root {
+	--footer-height: 120px;
+	--red: #6b0e20;
+	--acc-red: #ca2f2f;
+	--thumb-red: #460815;
+}
+
+html {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0;
+
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background: var(--thumb-red);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--acc-red);
+	border-radius: 5px;
+}
+
+
+#app {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+
+	margin: 0;
+
+	width: 100vw;
+	min-height: 100vh;
+}
+
+header {
+	height: auto;
+	border-top: solid 10px var(--red);
+
+	background-color: var(--red);
+	z-index: 1000;
+}
+
+header .mobile {
+	display: none;
+}
+
+header .banner {
+	width: 100%;
+	height: 250px;
+
+	background: url('/assets/img/banner.webp');
+	background-position: center 35%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header .toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 50px;
+	height: 50px;
+
+	border: 0;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+
+	background-color: transparent;
+
+	transition: background-color 0.2s;
+}
+
+header .toggle:hover, header .toggle:focus {
+	background-color: #460815;
+}
+
+header nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: stretch;
+	align-items: center;
+
+	width: 100%;
+	height: auto;
+
+	background-color: var(--red);
+}
+
+header nav .toggle {
+	display: none;
+}
+
+header nav a,
+header nav button,
+header nav > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: white;
+	text-decoration: none;
+
+	height: 50px;
+	flex-grow: 1;
+
+	border: 0;
+	padding: 0;
+	border-radius: 0;
+
+	font-size: 1em;
+	text-align: center;
+	font-weight: normal;
+	font-family: 'Roboto', sans-serif;
+
+	background-color: transparent;
+	transition: background-color 0.2s;
+}
+
+header nav span {
+	text-decoration: none;
+	padding: 0 25px;
+}
+
+header nav a:hover, header nav a:focus,
+header nav button:hover, header nav button:focus {
+	background-color: #460815;
+}
+
+header nav .dropdown {
+	position: relative;
+	display: inline-flex;
+}
+
+header nav .dropdown > button::after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: white transparent transparent transparent;
+	border-width: 5px 5px 0 5px;
+
+	transition: transform ease-in-out 0.15s;
+}
+
+header nav .dropdown > .options {
+	position: absolute;
+	top: 100%;
+	left: 0;
+
+	width: 100%;
+	height: 0;
+	padding: 0;
+	background-color: var(--red);
+
+	height: 0px;
+	overflow: hidden;
+
+	border-radius: 0 0 5px 5px;
+	background-color: #460815;
+
+	z-index: 1;
+	transition: height 0.2s ease;
+}
+
+header nav .dropdown > .options a {
+	width: 100%;
+	height: 45px;
+}
+
+header nav .dropdown > .options a:hover,
+header nav .dropdown > .options a:focus {
+	background-color: #2c080f;
+}
+
+header nav .dropdown.open > button::after {
+	transform: rotate(180deg);
+}
+
+
+
+main {
+	position: relative;
+	width: calc(100% - 10px);
+	margin: 5px;
+
+	flex-grow: 1;
+}
+
+
+footer {
+	width: 100%;
+	height: var(--footer-height);
+
+	background-color: var(--red);
+}
+
+.to-bottom {
+	position: absolute;
+	bottom: -5px;
+}
+
+.no-selectable {
+	user-select: none;
+}
+
+
+form input, form select {
+	width: calc(100% - 20px);
+	padding: 5px 10px;
+	border: 1px solid gray;
+	outline: none;
+	border-radius: 5px;
+	margin: 5px 0;
+
+	transition: border-color 0.2s;
+}
+
+form select {
+	width: 100%;
+}
+
+form input:focus, form select:focus {
+	border-color: black;
+}
+
+
+button {
+	background: var(--red);
+	border: 0;
+	border-radius: 25px;
+	padding: 15px 35px;
+
+	font-weight: bold;
+	font-size: 1.2em;
+	color: white;
+
+	cursor: pointer;
+
+	transition: background-color 0.3s;
+}
+
+button:hover, button:focus {
+	background-color: #460815;
+}
+
+label:has(~ input[required])::after, label:has(~ select[required])::after {
+	content: ' *';
+	color: var(--acc-red);
+}
+
+
+
+input[type="file"] {
+	position: absolute; 
+	overflow: hidden; 
+
+	clip: rect(0 0 0 0); 
+
+	height: 1px;
+	width: 1px; 
+
+	margin: -1px;
+	padding: 0;
+	border: 0; 
+}
+
+input[type="file"] + label {
+	position: relative;
+	width: 100%;
+	padding: 10px 0;
+
+	border: none;
+	background-color: #ffffffda;
+
+	font-size: 1.4em;
+	text-align: center;
+
+	cursor: pointer;
+}
+
+input[type="file"]:focus + label {
+	outline: auto;
+}
+
+input:disabled {
+	cursor: not-allowed;
+}
+
+
+label.upload {
+	display: inline-block;
+
+	width: 100%;
+}
+
+label.upload > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+	width: 100%;
+	height: 100px;
+
+	border: 2px dashed gray;
+	border-radius: 20px;
+
+	background-position: center center;
+	background-size: cover;
+	background-clip: content-box;
+
+	transition: height ease-in-out 0.5s, border-color 0.5s;
+}
+
+label.upload > div.ready {
+	border-color: black;
+	height: 250px;
+}
+
+.explanation {
+	color: #1c1c1c;
+	font-size: 0.8em;
+}
+
+.idk-how-to-name-this {
+	max-width: 90%;
+	height: auto;
+
+	border: 1px solid #1c1c1c;
+	border-radius: 15px;
+}
+
+img, embed {
+	aspect-ratio: auto attr(width) / attr(height);
+
+	height: auto;
+}
+
+iframe {
+	margin: 0 auto;
+	max-width: 90%;
+
+	border: 2px solid #292929;
+	border-radius: 20px;
+}
+
+
+/* Loading */
+.lds-ripple {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.lds-ripple div {
+	position: absolute;
+	border: 4px solid #222;
+	opacity: 1;
+	border-radius: 50%;
+	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+	animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+	0% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	4.9% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	5% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		width: 72px;
+		height: 72px;
+		opacity: 0;
+	}
+}
+
+
+/* Notifications */
+#notification {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: #292929c5;
+
+	z-index: 1100;
+}
+
+#notification > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: auto;
+	height: auto;
+
+	background-color: white;
+	border-radius: 20px;
+
+	padding: 25px 50px;
+}
+
+#notification > div button {
+	background-color: #222;
+	border: none;
+	border-radius: 10px;
+
+	padding: 10px 25px;
+
+	color: white;
+	font-weight: bold;
+
+	font-size: 1em;
+
+	transition: background-color 0.2s;
+}
+
+#notification > div button:hover, #notification > div button:focus {
+	background-color: #555;
+}
+
+
+/* Tracking banner */
+.just-enable-dnt-dude {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+
+	color: black !important;
+	background-color: white !important;
+	text-shadow: none !important;
+
+	padding: 25px 0;
+	font-size: 1.2em;
+
+	z-index: 1000;
+
+	box-shadow: 0 0 10px black;
+}
+
+.just-enable-dnt-dude button {
+	background-color: #222;
+	border: none;
+	border-radius: 10px;
+
+	padding: 10px 25px;
+
+	color: white;
+	font-weight: bold;
+
+	font-size: 1em;
+
+	transition: background-color 0.2s;
+}
+
+.just-enable-dnt-dude button:hover, .just-enable-dnt-dude button:focus {
+	background-color: #555;
+}
+
+@media screen and (max-width: 850px) {
+	header .banner {
+		height: 180px;
+	}
+
+	header {
+		border-top: 0;
+		border-bottom: solid 10px var(--red);
+	}
+
+	header .mobile {
+		display: block;
+	}
+
+	header nav {
+		display: block;
+
+		position: fixed;
+		top: -100%;
+		left: 0;
+
+		height: 100%;
+
+		overflow-y: auto;
+
+		transition: top 0.5s ease-in-out;
+	}
+
+	header nav .toggle {
+		display: flex;
+	}
+
+	header nav a,
+	header nav button {
+		width: 100% !important;
+		height: 80px !important;
+
+		font-size: 1.2em !important;
+
+		flex-grow: 0;
+	}
+
+	header nav > div {
+		flex-direction: column;
+		width: 100%;
+
+		height: auto;
+
+		flex-grow: 0;
+	}
+
+	header nav .dropdown > .options {
+		position: relative;
+		border-radius: 0;
+
+		top: 0;
+	}
+
+	header nav .dropdown > .options a {
+		height: 75px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	header .banner {
+		height: 100px;
+	}
+}

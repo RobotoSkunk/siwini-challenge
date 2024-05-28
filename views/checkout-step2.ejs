@@ -1,0 +1,45 @@
+<%- layout('default') %>
+
+
+<div style="margin: 0 auto; max-width: 500px; padding: 15px;">
+	<h1 style="text-align: center;">COMPROBANTE DE PAGO</h1>
+
+	<p>Ahora, por favor sube el comprobante de pago de tu registro.</p>
+
+	<p style="color: var(--acc-red); font-size: 0.8em;">* Requerido.</p>
+
+	<form method="POST">
+		<p>
+			<label>Código de registro</label>
+			<br>
+			<input type="text" id="code" value="<%= formId %>" disabled>
+		</p>
+
+		<p>
+			<label>Nombre del robot</label>
+			<br>
+			<input type="text" value="<%= name %>" disabled>
+		</p>
+
+		<p>
+			<label>Categoría</label>
+			<br>
+			<input type="text" value="<%= category %>" disabled>
+		</p>
+
+
+		<label for="checkout">Comprobante de pago</label>
+		<input type="file" data-name="checkout" id="checkout" accept=".png,.jpg" data-preview="checkout-preview" required>
+		<label for="checkout" class="upload">
+			<div id="checkout-preview">
+				<img src="/assets/img/upload.svg" alt="Upload" width="30">
+			</div>
+		</label>
+		<input type="hidden" name="checkout" id="checkout-input">
+
+
+		<p style="text-align: center; margin: 25px 0;">
+			<button>Subir Recibo</button>
+		</p>
+	<registro/formulario>
+</div>

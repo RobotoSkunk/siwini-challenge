@@ -1,0 +1,94 @@
+<%- layout('default') %>
+
+<link rel="preload" href="/assets/img/gold-texture.webp" as="image">
+
+<img class="deco left" src="/assets/img/top-left.webp" alt="" width="276" height="407">
+<img class="deco right" src="/assets/img/top-right.webp" alt="" width="500" height="537">
+<img class="deco bottom left" src="/assets/img/top-right.webp" alt="" width="500" height="537">
+<img class="deco bottom right" src="/assets/img/top-left.webp" alt="" width="276" height="407">
+
+<img class="deco logo" src="/assets/img/itspr.webp" alt="" width="1250" height="1250">
+
+<div class="content">
+	<div style="text-align: center">
+		<p class="th1">CONGRESO - TORNEO INTERNACIONAL DE ROBÓTICA</p>
+		<p class="th2"><b>RETO VERACRUZ POR LA CIENCIA 2023</b></p>
+		<h1 class="texturized" data-text="SIWINI CHALLENGE POZA RICA 2023">
+			<div>SIWINI CHALLENGE POZA RICA 2023</div>
+		</h1>
+		<p class="date">DEL 24 AL 27 DE OCTUBRE DE 2023</p>
+	</div>
+
+	<div class="lists">
+		<div>
+			<p><b>Actividades:</b></p>
+			<ul>
+				<li><b>Competencia de Robots.</b></li>
+				<li><b>Conferencias.</b></li>
+				<li><b>Cursos y Talleres.</b></li>
+				<li><b>Exhibición de Proyectos.</b></li>
+			</ul>
+		</div>
+
+		<div>
+			<p><b>Competencias:</b></p>
+			<ul>
+				<li><b>Minisumo Autónomo.</b></li>
+				<li><b>Microsumo Autónomo.</b></li>
+				<li><b>Minisumo Radio Control.</b></li>
+				<li><b>Seguidor de Línea.</b></li>
+				<li><b>Carrera de Insectos.</b></li>
+				<li><b>Robótica de Aplicación.</b></li>
+				<li><b>Exhibición de Drones.</b></li>
+				<li><b>Sumo 3 Kg. Autónomo.</b></li>
+				<li><b>Sumo 3 Kg. RC.</b></li>
+				<li><b>Soccer.</b></li>
+			</ul>
+		</div>
+	</div>
+
+	<div style="text-align: center">
+		<p class="exciting-i-think">
+			<span>GUERRA DE ROBOTS<br>DE 1, 3, 12 Y 30 LIBRAS</span>
+		</p>
+	</div>
+</div>
+
+<div class="junior">
+	<p><b>CATEGORÍA JUNIOR <span class="small">(hasta 15 años de edad)</span></b></p>
+	<ul>
+		<li><b>• Minisumo Radio Control.</b></li>
+		<li><b>• Carrera de Insectos.</b></li>
+	</ul>
+</div>
+
+
+<div class="robots-container">
+	<img src="/assets/img/itspr-robot-2.webp" alt="" width="447" height="600" class="robot left">
+	<img src="/assets/img/itspr-robot.webp" alt="" width="500" height="650" class="robot right">
+</div>
+
+<div class="go-and-register-now">
+	<p><b>¿Qué esperas? ¡Registrate ya y no te quedes fuera!</b></p>
+
+	<a href="/registro">
+		<button class="button"><b>REGISTRATE</b></button>
+	</a>
+</div>
+
+
+<div class="blogs">
+	<% for (const blog of blogs) { %>
+		<a class="blog" href="/blog/<%= blog.id %>">
+			<p class="title"><%= blog.title %></p>
+			<img src="/picture/<%= blog.img %>?size=256" alt="Banner">
+			<p><%= blog.content %></p>
+		</a>
+	<% } %>
+</div>
+
+
+<div class="visits">
+	<p><b>VISITAS<br><%= count %></b></p>
+</div>
+

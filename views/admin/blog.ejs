@@ -1,0 +1,43 @@
+<%- layout('default') %>
+
+
+<div style="margin: 0 auto; max-width: 500px; padding: 15px;">
+	<h1 style="text-align: center;">CREAR PUBLICACIÓN</h1>
+
+	<p style="color: var(--acc-red); font-size: 0.8em;">* Requerido.</p>
+
+	<form method="POST">
+		<p>
+			<label for="title">Título de la publicación</label>
+			<br>
+			<input type="text" name="title" id="title" required>
+		</p>
+
+
+		<label for="picture">Foto de portada</label>
+		<input type="file" data-name="picture" id="picture" accept=".png,.jpg" data-preview="picture-preview">
+		<label for="picture" class="upload">
+			<div id="picture-preview">
+				<img src="/assets/img/upload.svg" alt="Upload" width="30">
+			</div>
+		</label>
+		<input type="hidden" name="picture" id="picture-input">
+
+
+		<p>
+			<label for="content">Contenido</label>
+			<p><b>Nota:</b> Usa <a href="https://www.markdownguide.org/basic-syntax/">Markdown</a> para escribir la publicación.</p>
+			<textarea name="content" id="content" required></textarea>
+		</p>
+
+		<div style="margin-top: 25px">
+			<p>
+				<label for="token">Ingrese el token de acceso para publicar</label>
+				<br>
+				<input type="text" name="token" id="token" required>
+			</p>
+	
+			<button>Publicar</button>
+		</div>
+	<registro/formulario>
+</div>

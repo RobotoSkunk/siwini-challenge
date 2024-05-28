@@ -1,0 +1,8 @@
+# Beep boop, boop beep?
+
+User-agent: *
+Allow: /
+
+Disallow: /fish
+
+Sitemap: https://siwini-challenge-pozarica.com/sitemap.xml

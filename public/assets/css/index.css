@@ -1,0 +1,426 @@
+@import url('./fonts/revolvingdor.css');
+@import url('/assets/css/fonts/secular-one.css');
+
+:root {
+	--quiero-unos-cheetos: #fbef67;
+}
+
+html {
+	/* background: linear-gradient(25deg, #6b0e20 0%, #6b0e20 65%, #465fbf 100%); */
+	/* background-repeat: no-repeat; */
+
+	background: #630314;
+	text-shadow: -5px 5px 15px #0a1b5f;
+
+	color: white;
+}
+
+header {
+	text-shadow: none;
+	border: 0;
+
+	box-shadow: 0px 2px 5px #00000080;
+	background-color: #2b070f;
+
+	font-size: 1.2em;
+}
+
+header nav {
+	background: var(--thumb-red);
+}
+
+header nav a:hover, header nav a:focus,
+header nav button:hover, header nav button:focus {
+	background-color: #2b070f;
+}
+
+header nav .dropdown > .options {
+	background-color: #2b070f;
+	box-shadow: 2px 2px 5px #00000080;
+}
+
+header nav .dropdown > .options a:hover,
+header nav .dropdown > .options a:focus {
+	background-color: #1d070b;
+}
+
+
+
+
+header .banner {
+	display: none;
+}
+
+main {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+footer {
+	display: none;
+}
+
+.blogs {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	padding: 25px;
+
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.blogs > .blog {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	max-width: 300px;
+	padding: 15px;
+
+	text-align: justify;
+
+	border-radius: 15px;
+	box-shadow: -5px 5px 10px #00000080;
+
+	background-color: white;
+	color: black;
+	text-shadow: none;
+	text-decoration: none;
+
+	margin: 15px;
+
+	transition: background-color 0.2s;
+}
+
+.blogs > .blog:hover, .blogs > .blog:focus {
+	background-color: #fff1cf;
+}
+
+.blogs > .blog:hover .title, .blogs > .blog:focus .title {
+	text-decoration: underline;
+}
+
+.blogs > .blog img {
+	max-width: 100%;
+	height: auto;
+
+	border-radius: 15px;
+}
+
+.blogs > .blog .title {
+	font-size: 1.5em;
+	margin: 5px 0;
+	font-weight: bold;
+}
+
+.content {
+	font-size: 1.5em;
+}
+
+
+.texturized {
+	color: transparent !important;
+	position: relative;
+
+	text-shadow: none;
+}
+.texturized div {
+	background: url('/assets/img/gold-texture.webp');
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	position: absolute;
+	width: 100%;
+}
+.texturized:after {
+	text-shadow: -5px 5px 15px #0a1b5f;
+
+	content: attr(data-text);
+}
+
+.date {
+	margin: 5px 0;
+	font-size: 1.2em;
+
+	color: var(--quiero-unos-cheetos);
+	font-weight: bolder;
+}
+
+h1 {
+	font-family: 'Secular One', sans-serif;
+	font-size: 4em;
+	margin: 0;
+
+	color: var(--quiero-unos-cheetos);
+}
+
+.th1 {
+	font-size: 0.8em;
+	margin-bottom: 2px;
+}
+.th2 {
+	font-size: 1.5em;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+.lists {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	gap: 150px;
+	row-gap: 0px !important;
+
+	margin-top: 50px;
+}
+
+.lists > div > p {
+	font-family: 'Secular One', sans-serif;
+	color: #ffd872;
+	font-size: 3em;
+
+	margin: 5px 0;
+}
+.lists > div li {
+	font-size: 1.4em;
+}
+
+.robot {
+	position: absolute;
+
+	z-index: -1;
+	user-select: none;
+
+	aspect-ratio: auto attr(width) / attr(height);
+	width: auto;
+	height: auto;
+}
+
+.robot.left {
+	left: 10px;
+	top: 500px;
+}
+
+.robot.right {
+	bottom: 10px;
+	right: 10px;
+}
+
+
+.robots-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.exciting-i-think {
+	font-family: 'Revolvingdor', sans-serif;
+
+	color: transparent;
+	margin: 15px 0;
+	font-size: 2.8em;
+
+	background: url('/assets/img/gold-texture.webp');
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	text-shadow: none;
+
+	transform: rotate(-5deg);
+}
+
+.exciting-i-think:first-line {
+	font-size: 1.8em;
+}
+
+.deco {
+	position: absolute;
+	top: 0;
+
+	height: auto;
+	max-width: 50%;
+
+	z-index: -1;
+	user-select: none;
+}
+
+.deco.bottom {
+	bottom: 0;
+	top: initial;
+
+	transform: rotate(180deg);
+}
+
+.deco.left {
+	left: 0;
+}
+.deco.right {
+	right: 0;
+}
+
+.deco.logo {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	max-width: 100%;
+	max-height: 100%;
+
+	width: auto;
+	height: auto;
+	opacity: 0.5;
+
+	aspect-ratio: 1/1;
+}
+
+
+.go-and-register-now {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 150px;
+
+	font-size: 2em;
+}
+
+.go-and-register-now button {
+	font-size: 1.5em;
+	padding: 20px 30px;
+	border-radius: 10px;
+}
+
+button {
+	background: var(--quiero-unos-cheetos);
+	color: black;
+
+	transition: background-color 0.2s;
+}
+
+button:hover, button:focus {
+	background: #ffd872;
+}
+
+.junior {
+	/* color: var(--quiero-unos-cheetos); */ /* No acepten trabajos para el tec, son muy bipolares */
+	color: white;
+
+	text-align: center;
+	font-size: 2.1em;
+
+	margin-top: 80px;
+}
+
+.junior > p {
+	font-family: 'Secular One', sans-serif;
+
+	font-size: 1.2em;
+}
+
+.junior .small {
+	font-size: 0.7em;
+}
+
+.junior ul {
+	margin: 0 auto;
+	max-width: 500px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+
+	list-style: none;
+	padding: 0;
+}
+
+.visits {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 150px;
+
+	font-size: 4em;
+}
+
+.visits:first-line {
+	font-size: 0.5em;
+}
+
+
+@media screen and (max-width: 1700px) {
+	.robot {
+		position: initial;
+
+		max-width: 100%;
+		text-align: right;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.content {
+		font-size: 1.2em;
+	}
+
+	header nav .dropdown > .options {
+		box-shadow: none;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.lists {
+		gap: 50px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.robots-container {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	header nav {
+		background: var(--red);
+	}
+	
+	header nav a:hover, header nav a:focus,
+	header nav button:hover, header nav button:focus {
+		background-color: #460815;
+	}
+	
+	header nav .dropdown > .options {
+		background-color: var(--thumb-red);
+		box-shadow: none;
+	}
+	
+	header nav .dropdown > .options a:hover,
+	header nav .dropdown > .options a:focus {
+		background-color: #2c080f;
+	}
+
+	header nav a,
+	header nav button {
+		font-size: 1em !important;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.lists {
+		gap: 25px;
+	}
+
+	.content {
+		font-size: 0.8em;
+	}
+}

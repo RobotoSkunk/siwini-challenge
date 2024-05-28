@@ -1,0 +1,122 @@
+<%- layout('default') %>
+
+<div style="margin: 0 auto; max-width: 500px; padding: 15px;">
+	<h1 style="text-align: center;">REGISTRO PARA EL EVENTO</h1>
+
+	<p style="color: var(--acc-red); font-size: 0.8em;">* Requerido.</p>
+
+	<form method="POST">
+		<p>
+			<label for="robot-name">Nombre del robot</label>
+			<br>
+			<input type="text" name="robot-name" id="robot-name" required>
+		</p>
+
+
+		<p>
+			<label for="category">Categoría</label>
+			<br>
+			<select id="category" name="category" required>
+				<% for (const category of categories) { %>
+					<option value="<%= category.id %>">
+						<%= category.name %>
+					</option>
+				<% } %>
+			</select>
+		</p>
+
+
+		<!-- Si no ponía (opcional), los niños no entendían :) -->
+		<label for="robot-pic">Foto del robot (opcional)</label>
+		<input type="file" data-name="robot-pic" id="robot-pic" accept=".png,.jpg" data-preview="robot-pic-preview">
+		<label for="robot-pic" class="upload">
+			<div id="robot-pic-preview">
+				<img src="/assets/img/upload.svg" alt="Upload" width="30">
+			</div>
+		</label>
+		<input type="hidden" name="robot-pic" id="robot-pic-input">
+
+
+		<p>
+			<label for="team-name">Nombre del equipo</label>
+			<br>
+			<input type="text" name="team-name" id="team-name" required>
+		</p>
+
+
+		<p>
+			<label for="team-leader-name">Nombre del capitán del equipo.</label>
+			<br>
+			<input type="text" name="team-leader-name" id="team-leader-name" required>
+		</p>
+
+
+		<p>
+			<label for="team-leader-email">Correo electrónico del capitán.</label>
+			<br>
+			<input type="email" name="team-leader-email" id="team-leader-email" required>
+		</p>
+
+
+		<p>
+			<label for="contact-phone">Teléfono de contacto (Formato XXX XXX XXXX)</label>
+			<br>
+			<input type="tel" name="contact-phone" id="contact-phone" pattern="([0-9]{3} [0-9]{3} [0-9]{4})|([0-9]{10})" required>
+		</p>
+
+
+		<p>
+			<label for="assistant-1">Asistente 1</label>
+			<br>
+			<input type="text" name="assistant-1" id="assistant-1" required>
+		</p>
+
+
+		<p>
+			<label for="assistant-2">Asistente 2</label>
+			<br>
+			<input type="text" name="assistant-2" id="assistant-2" required>
+		</p>
+
+
+		<p>
+			<label for="consultant">Asesor</label>
+			<br>
+			<input type="text" name="consultant" id="consultant" required>
+		</p>
+
+
+		<p>
+			<label for="institution">Institución o empresa</label>
+			<br>
+			<input type="text" name="institution" id="institution" required>
+		</p>
+
+
+		<p>
+			<label for="country">País</label>
+			<br>
+			<input type="text" name="country" id="country" required>
+		</p>
+
+
+
+		<!-- Si no ponía (opcional), los niños no entendían :) -->
+		<label for="checkout">Comprobante de pago (opcional)</label>
+
+		<p class="explanation">Puedes enviar el comprobante después, no es obligatorio subirlo en este momento.</p>
+
+		<input type="file" data-name="checkout" id="checkout" accept=".png,.jpg" data-preview="checkout-preview">
+		<label for="checkout" class="upload">
+			<div id="checkout-preview">
+				<img src="/assets/img/upload.svg" alt="Upload" width="30">
+			</div>
+		</label>
+		<input type="hidden" name="checkout" id="checkout-input">
+
+
+		<p style="text-align: center; margin: 25px 0;">
+			<button>Inscribirse</button>
+		</p>
+	<registro/formulario>
+</div>

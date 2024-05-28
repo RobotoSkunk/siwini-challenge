@@ -1,0 +1,29 @@
+<%- layout('default') %>
+
+
+<div style="margin: 0 auto; max-width: 500px; padding: 15px;">
+	<h1 style="text-align: center;">CÓDIGO DE REGISTRO</h1>
+
+	<p>Antes de continuar, por favor ingresa el código de registro que te fue generado al momento de registrarte.</p>
+
+	<p>
+		<b>Nota:</b> el código de registro <b>no es generado por equipo</b>, sino por categoría.
+					Por lo tanto, si te registraste en más de una categoría, debes realizar este
+					proceso por cada una de ellas.
+	</p>
+
+	<p style="color: var(--acc-red); font-size: 0.8em;">* Requerido.</p>
+
+	<form method="POST">
+		<p>
+			<label for="form-id">Código de registro</label>
+			<br>
+			<input type="text" name="form-id" id="form-id" required>
+		</p>
+
+
+		<p style="text-align: center; margin: 25px 0;">
+			<button>Continuar</button>
+		</p>
+	<registro/formulario>
+</div>
